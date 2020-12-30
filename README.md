@@ -4,9 +4,9 @@
 
 ## Preview
 
-[![Stylish Portfolio Preview](https://assets.startbootstrap.com/img/screenshots/themes/stylish-portfolio.png)](https://startbootstrap.github.io/startbootstrap-stylish-portfolio/)
+[![See my website](https://assets.startbootstrap.com/img/screenshots/themes/stylish-portfolio.png)](https://adrielmodollo.github.io/BootstrapComJs/)
 
-**[View Live Preview](https://startbootstrap.github.io/startbootstrap-stylish-portfolio/)**
+**[View Live Preview](https://adrielmodollo.github.io/BootstrapComJs/)**
 
 ## Status
 
