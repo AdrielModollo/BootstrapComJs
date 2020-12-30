@@ -1,5 +1,5 @@
 
-//Restringir código  teste
+//Restringir código  
 window.onload = function () {
     document.addEventListener("contextmenu", function (e) {
         e.preventDefault();
@@ -39,10 +39,13 @@ window.onload = function () {
 }
 
 
+var deBase64 = atob('TWFyaW5hIGV1IHRlIGFtbw==')
 
 function reciproco(){
         var amor = prompt("Digite a senha:");
-    if (amor.toUpperCase() ==  'MARINA' || amor.toUpperCase() == 'MARINA FURTADO' || amor.toUpperCase() == 'MARINA FURTADO BORGES' || amor.toUpperCase() == 'MARINA FURTADO BORGES MODOLLO'){
+    if (amor ==  deBase64){
+        window.alert('Parabéns por chegar até aqui, só para garantir vamos para a próxima etapa! rsrs') 
+        //Se você está aqui, você estava tentando quebrar meu código, sinto muito o link abaixo é protegido por senha. Boa tentativa! rssrs
             location.href="https://1drv.ms/u/s!Avd2kPPifc10hWaN74jSYB8-IzrU?e=c6tt5F";
         }
     else {

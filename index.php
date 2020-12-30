@@ -44,7 +44,8 @@
     </ul>
   </nav>
 
-  <!-- Header -->
+
+  <!-- Header fwqet23-->
   <header class="masthead d-flex">
     <div class="container text-center my-auto">
       <h1 class="mb-1">Te amo</h1>
@@ -90,10 +91,17 @@
   </section>
 
   <!-- Call to Action -->
+
+
+  
   <section class="content-section bg-primary text-white">
     <div class="container text-center">
       <h2 class="mb-4">Os botões abaixo são impossíveis de resistir ......</h2>
-      <a href="https://www.facebook.com/drielmodollo/posts/638397890399167" class="btn btn-xl btn-light mr-4">Clique em mim!</a>
+      <div id="divConteudo">
+      <iframe width="560" height="370" src="https://www.youtube.com/embed/8gCm0fRWe6U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+     <button  id="btnMostrarEsconder" class="btn btn-xl btn-light mr-4" type="button">Clique em mim!</button>
+     
       <a href="https://www.facebook.com/drielmodollo/posts/638397890399167" class="btn btn-xl btn-dark">Olhe para mim!</a>
     </div>
   </section>
@@ -129,6 +137,10 @@
 
   <!-- JS Edição -->
   <script type="text/javascript" src="validacao.js"></script>
+
+  <!-- Animação vídeo -->
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script type="text/javascript" src="video/iFrameVideo.js"></script>
 
 </body>
 
