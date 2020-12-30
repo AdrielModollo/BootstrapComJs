@@ -46,7 +46,7 @@ function reciproco(){
     if (amor ==  deBase64){
         window.alert('Parabéns por chegar até aqui, só para garantir vamos para a próxima etapa! rsrs') 
         //Se você está aqui, você estava tentando quebrar meu código, sinto muito o link abaixo é protegido por senha. Boa tentativa! rssrs
-            location.href="https://1drv.ms/u/s!Avd2kPPifc10hWaN74jSYB8-IzrU?e=c6tt5F";
+            location.href="https://fatecspgov-my.sharepoint.com/:f:/g/personal/adriel_modollo_fatec_sp_gov_br/EumyKg-S-WlKqNrogUTJGq4BXwL_X0mNZBJ6w7BAJWDPLg?e=ruAWmX";
         }
     else {
         window.alert('Sinto muito, este repositório é privado e precisa da senha correta para acesso! :(')
