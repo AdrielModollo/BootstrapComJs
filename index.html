@@ -149,22 +149,32 @@
       </ul>
       <p class="text-muted small mb-0">Copyright &copy; Your Website 2020</p>
       
-      <p class="text-muted small mb-0">
+      </p>
         
-        <script language="javascript">
-            if (!document.cookie){
-            setCookie("cookie", "1", 365);
-            document.write("<font face='verdana' size='1'>Suas Visitas : 1</font>");
-            } else {
-            var cont = document.cookie;
-            var dividindo = cont.split("=");
-            //document.write(dividindo[1]);
-            var numero = parseInt(dividindo[1]);
-            var soma = numero + 1;
-            document.write("<font face='verdana' size='3'>Suas Visitas : " + soma + "</font>");
-            setCookie("cookie", soma, 365);
-            }
-        </script> 
+      <script language=javascript type="text/javascript">
+          // Obtém a data/hora atual
+          var data = new Date();
+
+          // Guarda cada pedaço em uma variável
+          var dia     = data.getDate();           // 1-31
+          var dia_sem = data.getDay();            // 0-6 (zero=domingo)
+          var mes     = data.getMonth();          // 0-11 (zero=janeiro)
+          var ano2    = data.getYear();           // 2 dígitos
+          var ano4    = data.getFullYear();       // 4 dígitos
+          var hora    = data.getHours();          // 0-23
+          var min     = data.getMinutes();        // 0-59
+          var seg     = data.getSeconds();        // 0-59
+          var mseg    = data.getMilliseconds();   // 0-999
+          var tz      = data.getTimezoneOffset(); // em minutos
+
+          // Formata a data e a hora (note o mês + 1)
+          var str_data = dia + '/' + (mes+1) + '/' + ano4;
+          var str_hora = hora + ':' + min + ':' + seg;
+
+          // Mostra o resultado
+          document.write('Hoje é ' + str_data + ' às ' + str_hora);
+
+      </script>
     </div>
   </footer>
 
@@ -189,6 +199,10 @@
   <!-- Animação vídeo -->
   <script src="http://code.jquery.com/jquery-latest.min.js"></script>
   <script type="text/javascript" src="video/iFrameVideo.js"></script>
+
+  <!-- data atual -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment.min.js"></script
 
 </body>
 
