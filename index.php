@@ -1,3 +1,18 @@
+<?php
+$a = 0;
+include 'contador.php';
+if (isset($_COOKIE['counte'])) {
+  $counte = $_COOKIE['counte'] + 1;
+}else{
+$counte = 1;
+$a++; 
+}
+setcookie('counte', "$counte", time()+3700);
+$abre =@fopen("contador.php","w");
+ $ss ='<?php $a='.$a.'; ?>';
+ $escreve =fwrite($abre, $ss);
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,6 +40,9 @@
 
 </head> 
 <body id="page-top">
+
+</body>
+</html>
 
   <!-- Navigation -->
   <a class="menu-toggle rounded" href="#">
@@ -99,22 +117,22 @@
       <div class="row no-gutters">
         <div class="col-lg-6">
           <a class="portfolio-item" href="#!">
-            <iframe width="400" height="300" src="https://www.youtube.com/embed/4O9pvuy-LQI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="380" height="300" src="https://www.youtube.com/embed/4O9pvuy-LQI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </a>
         </div>
         <div class="col-lg-6">
           <a class="portfolio-item" href="#!">
-           <iframe width="400" height="300" src="https://www.youtube.com/embed/PfDVTirXDio" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+           <iframe width="380" height="300" src="https://www.youtube.com/embed/PfDVTirXDio" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </a>
         </div>
         <div class="col-lg-6">
           <a class="portfolio-item" href="#!">
-            <iframe width="400" height="300" src="https://www.youtube.com/embed/XNLo9Uy2nY0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="380" height="300" src="https://www.youtube.com/embed/XNLo9Uy2nY0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </a>
         </div>
         <div class="col-lg-6">
           <a class="portfolio-item" href="#!">
-            <iframe width="400" height="300" src="https://www.youtube.com/embed/8gCm0fRWe6U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="380" height="300" src="https://www.youtube.com/embed/8gCm0fRWe6U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </a>
         </div>
       </div>
@@ -123,14 +141,11 @@
 
   <!-- Call to Action -->
 
-
-  
-  <section class="content-section bg-primary text-white">
+ <section class="content-section bg-primary text-white">
     <div class="container text-center">
       <h2 class="mb-4">Os botões abaixo são impossíveis de resistir ......</h2>
       <div id="divConteudo">
-      <iframe width="400" height="300" src="https://www.youtube.com/embed/8gCm0fRWe6U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
+      <iframe width="380" height="305" src="https://www.youtube.com/embed/1c8XBwXrm2M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>    </div>
      <button  id="btnMostrarEsconder" class="btn btn-xl btn-light mr-4" type="button">Clique em mim!</button>
      
       <a href="https://www.facebook.com/drielmodollo/posts/638397890399167" class="btn btn-xl btn-dark">Olhe para mim!</a>
@@ -148,6 +163,11 @@
         </li>
       </ul>
       <p class="text-muted small mb-0">Copyright &copy; Your Website 2020</p>
+      
+      <p class="text-muted small mb-0"> <?php 
+      echo "<br>$a Pessoas visitaram esse site e você já visitou " .$counte. " vezes"?>
+    
+  <?php $a=0; ?>
     </div>
   </footer>
 
