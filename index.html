@@ -26,22 +26,6 @@
 </head> 
 <body id="page-top">
 
-    <?php
-        $a = 0;
-        include 'contador.php';
-        if (isset($_COOKIE['counte'])) {
-        $counte = $_COOKIE['counte'] + 1;
-        }else{
-        $counte = 1;
-        $a++; 
-        }
-        setcookie('counte', "$counte", time()+3700);
-        $abre =@fopen("contador.php","w");
-        $ss ='<?php $a='.$a.'; ?>';
-        $escreve =fwrite($abre, $ss);
-    ?>
-
-
 </body>
 </html>
 
@@ -167,10 +151,20 @@
       
       <p class="text-muted small mb-0">
         
-        <?php 
-      echo "<br>$a Pessoas visitaram esse site e você já visitou " .$counte. " vezes"?>
-    
-  <?php $a=0; ?>
+        <script language="javascript">
+            if (!document.cookie){
+            setCookie("cookie", "1", 365);
+            document.write("<font face='verdana' size='1'>Suas Visitas : 1</font>");
+            } else {
+            var cont = document.cookie;
+            var dividindo = cont.split("=");
+            //document.write(dividindo[1]);
+            var numero = parseInt(dividindo[1]);
+            var soma = numero + 1;
+            document.write("<font face='verdana' size='3'>Suas Visitas : " + soma + "</font>");
+            setCookie("cookie", soma, 365);
+            }
+        </script> 
     </div>
   </footer>
 

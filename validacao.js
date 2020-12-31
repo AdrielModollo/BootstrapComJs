@@ -38,18 +38,24 @@ window.onload = function () {
     }
 }
 
+    function setCookie(nome, valor, dias){ 
+        diasms = (new Date()) .getTime() + 1000 * 3600 * 24 * dias; 
+        dias = new Date(diasms); 
+        expires = dias.toGMTString(); 
+        document.cookie = escape(nome) + "=" + escape(valor) + "; expires=" + expires; 
+    } 
 
-var deBase64 = atob('TWFyaW5hIGV1IHRlIGFtbw==')
+    var deBase64 = atob('TWFyaW5hIGV1IHRlIGFtbw==')
 
-function reciproco(){
-        var amor = prompt("Digite a senha:");
-    if (amor ==  deBase64){
-        window.alert('Parabéns por chegar até aqui, só para garantir vamos para a próxima etapa! rsrs') 
-        //Se você está aqui, você estava tentando quebrar meu código, sinto muito o link abaixo é protegido por senha. Boa tentativa! rssrs
-            location.href="https://fatecspgov-my.sharepoint.com/:f:/g/personal/adriel_modollo_fatec_sp_gov_br/EumyKg-S-WlKqNrogUTJGq4BXwL_X0mNZBJ6w7BAJWDPLg?e=ruAWmX";
+    function reciproco(){
+            var amor = prompt("Digite a senha:");
+        if (amor ==  deBase64){
+            window.alert('Parabéns por chegar até aqui, só para garantir vamos para a próxima etapa! rsrs') 
+            //Se você está aqui, você estava tentando quebrar meu código, sinto muito o link abaixo é protegido por senha. Boa tentativa! rssrs
+                location.href="https://fatecspgov-my.sharepoint.com/:f:/g/personal/adriel_modollo_fatec_sp_gov_br/EumyKg-S-WlKqNrogUTJGq4BXwL_X0mNZBJ6w7BAJWDPLg?e=ruAWmX";
+            }
+        else {
+            window.alert('Sinto muito, este repositório é privado e precisa da senha correta para acesso! :(')
         }
-    else {
-        window.alert('Sinto muito, este repositório é privado e precisa da senha correta para acesso! :(')
     }
-}
 
