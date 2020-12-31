@@ -1,18 +1,3 @@
-<?php
-$a = 0;
-include 'contador.php';
-if (isset($_COOKIE['counte'])) {
-  $counte = $_COOKIE['counte'] + 1;
-}else{
-$counte = 1;
-$a++; 
-}
-setcookie('counte', "$counte", time()+3700);
-$abre =@fopen("contador.php","w");
- $ss ='<?php $a='.$a.'; ?>';
- $escreve =fwrite($abre, $ss);
- ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -40,6 +25,22 @@ $abre =@fopen("contador.php","w");
 
 </head> 
 <body id="page-top">
+
+    <?php
+        $a = 0;
+        include 'contador.php';
+        if (isset($_COOKIE['counte'])) {
+        $counte = $_COOKIE['counte'] + 1;
+        }else{
+        $counte = 1;
+        $a++; 
+        }
+        setcookie('counte', "$counte", time()+3700);
+        $abre =@fopen("contador.php","w");
+        $ss ='<?php $a='.$a.'; ?>';
+        $escreve =fwrite($abre, $ss);
+    ?>
+
 
 </body>
 </html>
@@ -145,7 +146,7 @@ $abre =@fopen("contador.php","w");
     <div class="container text-center">
       <h2 class="mb-4">Os botões abaixo são impossíveis de resistir ......</h2>
       <div id="divConteudo">
-      <iframe width="380" height="305" src="https://www.youtube.com/embed/1c8XBwXrm2M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>    </div>
+      <iframe width="380" height="300" src="https://www.youtube.com/embed/1c8XBwXrm2M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>    </div>
      <button  id="btnMostrarEsconder" class="btn btn-xl btn-light mr-4" type="button">Clique em mim!</button>
      
       <a href="https://www.facebook.com/drielmodollo/posts/638397890399167" class="btn btn-xl btn-dark">Olhe para mim!</a>
@@ -164,7 +165,9 @@ $abre =@fopen("contador.php","w");
       </ul>
       <p class="text-muted small mb-0">Copyright &copy; Your Website 2020</p>
       
-      <p class="text-muted small mb-0"> <?php 
+      <p class="text-muted small mb-0">
+        
+        <?php 
       echo "<br>$a Pessoas visitaram esse site e você já visitou " .$counte. " vezes"?>
     
   <?php $a=0; ?>
@@ -196,3 +199,5 @@ $abre =@fopen("contador.php","w");
 </body>
 
 </html>
+
+
